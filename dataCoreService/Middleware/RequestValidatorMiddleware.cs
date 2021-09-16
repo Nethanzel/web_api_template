@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -28,17 +25,14 @@ namespace dataCoreService.Middleware
             {
                 HttpClient validator = new HttpClient //init http client
                 {
-                    Timeout = TimeSpan.FromSeconds(30)
+                    Timeout = TimeSpan.FromSeconds(30),
                 };
 
-                var values = new Dictionary<string, string> // init data to be sent
-                {
-                    { "token", context.Request.Headers["token"] },
-                };
+                validator.DefaultRequestHeaders.Add("token", String.Format(context.Request.Headers["token"])); // set request header
 
                 try
                 {
-                    HttpResponseMessage response = await validator.PostAsync("http://127.0.0.1/auth/validate", new FormUrlEncodedContent(values)); //send token to auth service
+                    HttpResponseMessage response = await validator.GetAsync("http://127.0.0.1/auth/validate"); //send token to auth service
                     var statusCode = ((int)response.StatusCode);
                     if (statusCode == 401)  //if code 401 means invalid token
                     {
