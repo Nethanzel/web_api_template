@@ -40,3 +40,9 @@ C:\Users\Timeless\Source\Repos\Nethanzel\web_api_template\dataCoreService\obj\De
 C:\Users\Timeless\Source\Repos\Nethanzel\web_api_template\dataCoreService\obj\Debug\netcoreapp3.1\dataCoreService.dll
 C:\Users\Timeless\Source\Repos\Nethanzel\web_api_template\dataCoreService\obj\Debug\netcoreapp3.1\dataCoreService.pdb
 C:\Users\Timeless\Source\Repos\Nethanzel\web_api_template\dataCoreService\obj\Debug\netcoreapp3.1\dataCoreService.genruntimeconfig.cache
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\obj\Debug\netcoreapp3.1\dataCoreService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fabad\Desktop\dataCoreService\dataCoreService\obj\Debug\netcoreapp3.1\dataCoreService.csproj.CopyComplete

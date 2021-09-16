@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,13 +10,22 @@ namespace dataCoreService.Middleware
     public class UserKeyValidatorsMiddleware
     {
         private readonly RequestDelegate _next;
-        public UserKeyValidatorsMiddleware(RequestDelegate next)
+        public IConfiguration Configuration { get; }
+
+        public UserKeyValidatorsMiddleware(RequestDelegate next, IConfiguration configuration)
         {
             _next = next;
+            Configuration = configuration;
         }
 
         public async Task Invoke(HttpContext context)
         {
+            if (context.Request.Path.Value.StartsWith("/swagger"))
+            {
+                await _next.Invoke(context); // call next middleware
+                return;
+            }
+
             if (!context.Request.Headers.Keys.Contains("token"))
             {
                 context.Response.StatusCode = 400; //Bad Request ** Missing auth token               
@@ -32,7 +42,7 @@ namespace dataCoreService.Middleware
 
                 try
                 {
-                    HttpResponseMessage response = await validator.GetAsync("http://127.0.0.1/auth/validate"); //send token to auth service
+                    HttpResponseMessage response = await validator.GetAsync(Configuration["external:authServer"]); //send token to auth service
                     var statusCode = ((int)response.StatusCode);
                     if (statusCode == 401)  //if code 401 means invalid token
                     {

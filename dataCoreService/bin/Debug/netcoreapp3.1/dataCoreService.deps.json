@@ -31,6 +31,7 @@
     ".NETCoreApp,Version=v3.1": {
       "dataCoreService/1.0.0": {
         "dependencies": {
+          "Swashbuckle.AspNetCore": "6.2.1",
           "System.Net.Http": "4.3.4",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -322,8 +323,20 @@
           "dataCoreService.dll": {}
         }
       },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.NETCore.Platforms/1.1.1": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.OpenApi/1.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -366,6 +379,53 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
+      "Swashbuckle.AspNetCore/6.2.1": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "6.2.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.2.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.2.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/6.2.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.2.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "6.2.1.0",
+            "fileVersion": "6.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/6.2.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "6.2.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "6.2.1.0",
+            "fileVersion": "6.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/6.2.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "6.2.1.0",
+            "fileVersion": "6.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -2414,6 +2474,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",
       "serviceable": true,
@@ -2427,6 +2494,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+      "path": "microsoft.openapi/1.2.3",
+      "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -2532,6 +2606,34 @@
       "sha512": "sha512-leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j5hM7XhGaZqKu9BOqKzyAlPzqa4qSJF6sE4HFGW4YBnt5ogpJzp4CVbgs8KnV15NngVJMKX6ZErfb50CSb9Chg==",
+      "path": "swashbuckle.aspnetcore/6.2.1",
+      "hashPath": "swashbuckle.aspnetcore.6.2.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uxvZjIkzkcHwPFu4mfJQljjx4kVzdS6SMgMK5k5E0U600vb+527lllY2uo8Ul3BZr1A6N/jksK6OyZKjBwEYvA==",
+      "path": "swashbuckle.aspnetcore.swagger/6.2.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.6.2.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b+rx3qw4G3UIKR5DA1z0wNUcHmqT4grQzqDMa6Yz1wqpUT+XJlq5QkFrkCTbWvH3EWG8YlLqiJtKSanjgaz2NQ==",
+      "path": "swashbuckle.aspnetcore.swaggergen/6.2.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.6.2.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GZSdcbBaBwtWzjA5vSIPJZtw++LTdFW/PfWpBdZ687aQ3kLPFxa0AaJxtIAj1obDx0xfDsNFDNofRnLI+f670Q==",
+      "path": "swashbuckle.aspnetcore.swaggerui/6.2.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.6.2.1.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
