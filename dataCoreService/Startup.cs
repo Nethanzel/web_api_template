@@ -1,16 +1,11 @@
 using dataCoreService.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace dataCoreService
 {
@@ -27,6 +22,7 @@ namespace dataCoreService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            AddSwagger(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +37,13 @@ namespace dataCoreService
 
             app.UseHttpsRedirection();
 
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "dataCoreService");
+            });
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -48,6 +51,28 @@ namespace dataCoreService
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+        }
+
+
+        private void AddSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new OpenApiInfo
+                {
+                    Title = $"dataCoreService {groupName}",
+                    Version = groupName,
+                    Description = "Service for data access and persistance.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Nethanzel",
+                        Email = "natanaelabaad@gmail.com",
+                        Url = new Uri("https://nethanzels-showroom.herokuapp.com"),
+                    }
+                });
             });
         }
     }
