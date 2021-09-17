@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Timeless\\Source\\Repos\\Nethanzel\\web_api_template\\dataCoreService\\dataCoreService.csproj": {}
+    "C:\\Users\\fabad\\Desktop\\dataCoreService\\dataCoreService\\dataCoreService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Timeless\\Source\\Repos\\Nethanzel\\web_api_template\\dataCoreService\\dataCoreService.csproj": {
+    "C:\\Users\\fabad\\Desktop\\dataCoreService\\dataCoreService\\dataCoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Timeless\\Source\\Repos\\Nethanzel\\web_api_template\\dataCoreService\\dataCoreService.csproj",
+        "projectUniqueName": "C:\\Users\\fabad\\Desktop\\dataCoreService\\dataCoreService\\dataCoreService.csproj",
         "projectName": "dataCoreService",
-        "projectPath": "C:\\Users\\Timeless\\Source\\Repos\\Nethanzel\\web_api_template\\dataCoreService\\dataCoreService.csproj",
-        "packagesPath": "C:\\Users\\Timeless\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Timeless\\Source\\Repos\\Nethanzel\\web_api_template\\dataCoreService\\obj\\",
+        "projectPath": "C:\\Users\\fabad\\Desktop\\dataCoreService\\dataCoreService\\dataCoreService.csproj",
+        "packagesPath": "C:\\Users\\fabad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabad\\Desktop\\dataCoreService\\dataCoreService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Timeless\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fabad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

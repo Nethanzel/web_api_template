@@ -1,4 +1,6 @@
-﻿using dataCoreService.Data;
+﻿/* DOCS */
+/* more about api controller's repository init at https://dotnettutorials.net/lesson/generic-repository-pattern-csharp-mvc/ */
+using dataCoreService.Data;
 using dataCoreService.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
