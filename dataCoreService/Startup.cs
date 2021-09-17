@@ -1,3 +1,4 @@
+using dataCoreService.Data;
 using dataCoreService.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace dataCoreService
@@ -21,6 +23,10 @@ namespace dataCoreService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DBContext>(opts =>
+                opts.UseSqlServer(Configuration["DBConnection:connectionString"]));
+            // Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
             services.AddControllers();
             AddSwagger(services);
         }
@@ -36,7 +42,6 @@ namespace dataCoreService
             }
 
             app.UseHttpsRedirection();
-
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
