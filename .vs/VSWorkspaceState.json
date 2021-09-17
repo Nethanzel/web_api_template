@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\dataCoreService",
+    "\\dataCoreService\\Middleware"
+  ],
+  "SelectedNode": "\\dataCoreService\\Middleware\\RequestValidatorMiddleware.cs",
+  "PreviewInSolutionExplorer": false
+}
