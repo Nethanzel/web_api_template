@@ -1,5 +1,5 @@
 ﻿/* docs */
-/* to init a new instace of this clase use "private IGenericRepository<Employee> repository = null;" */
+/* to init a new instace of this clase use "private IGenericRepository<Entity> repository = null;" */
 
 /* for more details go to https://dotnettutorials.net/lesson/generic-repository-pattern-csharp-mvc/ */
 

@@ -27,6 +27,8 @@ namespace dataCoreService
                 opts.UseSqlServer(Configuration["DBConnection:connectionString"]));
             // Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
+            services.AddScoped(typeof(IRepositoryInterface<>), typeof(DBManager<>));
+
             services.AddControllers();
             AddSwagger(services);
         }

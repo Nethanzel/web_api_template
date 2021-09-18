@@ -9,10 +9,10 @@ namespace dataCoreService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private IRepositoryInterface<User> repository = null;
-        public UserController(IRepositoryInterface<User> repository)
+        public UsersController(IRepositoryInterface<User> repository)
         {
             this.repository = repository;
         }
